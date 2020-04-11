@@ -18,7 +18,7 @@
                 }
             },
             "desription": "Get general stats of a player.",
-            "category"
+            "category": "general",
             "examples": [
                 "stats ThatDPSChick ps4",
                 "stats Zencep",
