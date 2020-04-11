@@ -1,0 +1,20 @@
+{
+    "categories": ["General", "Direct Message", "Administration"],
+    "commands": {
+        "stats": {
+            "args": {
+                "player": {
+                    "required": true,
+                    "description": "The player name or id of the user"
+                },
+                "platform": {
+                    "required": false,
+                    "description": "The platform to request",
+                    "options": ["xbox"]
+                }
+            }
+            "desription": "",
+            "examples": []
+        }
+    }
+}
