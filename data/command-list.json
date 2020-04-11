@@ -1,5 +1,9 @@
 {
-    "categories": ["General", "Direct Message", "Administration"],
+    "categories": {
+        "general": "General",
+        "dm": "Direct Message",
+        "admin": "Administration"
+    },
     "commands": {
         "stats": {
             "args": {
@@ -10,11 +14,16 @@
                 "platform": {
                     "required": false,
                     "description": "The platform to request",
-                    "options": ["xbox"]
+                    "options": ["xbox", "ps4", "switch", "pc"]
                 }
-            }
-            "desription": "",
-            "examples": []
+            },
+            "desription": "Get general stats of a player.",
+            "category"
+            "examples": [
+                "stats ThatDPSChick ps4",
+                "stats Zencep",
+                "stats id:9152847"
+            ]
         }
     }
 }
