@@ -1,29 +1,34 @@
 {
-    "categories": {
-        "general": "General",
-        "dm": "Direct Message",
-        "admin": "Administration"
-    },
-    "commands": {
-        "stats": {
-            "args": {
-                "player": {
-                    "required": true,
-                    "description": "The player name or id of the user"
-                },
-                "platform": {
-                    "required": false,
-                    "description": "The platform to request",
-                    "options": ["xbox", "ps4", "switch", "pc"]
-                }
-            },
-            "desription": "Get general stats of a player.",
-            "category": "general",
-            "examples": [
-                "stats ThatDPSChick ps4",
-                "stats Zencep",
-                "stats id:9152847"
-            ]
+  "categories": {
+    "general": "General",
+    "dm": "Direct Message",
+    "admin": "Administration"
+  },
+  "commands": {
+    "stats": {
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the user"
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
         }
+      },
+      "desription": "Get general stats of a player.",
+      "category": "general",
+      "examples": [
+        "stats ThatDPSChick ps4",
+        "stats Zencep",
+        "stats id:9152847"
+      ]
     }
+  }
 }
