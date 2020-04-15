@@ -5,6 +5,7 @@
     "admin": "Administration"
   },
   "commands": {
+  
     "stats": {
       "args": {
         "player": {
@@ -29,6 +30,145 @@
         "stats Zencep",
         "stats id:9152847"
       ]
-    }
+    },
+	
+	"current": {
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the user"
+        }
+      },
+      "desription": "Get info about your current match.",
+      "category": "general",
+      "examples": [
+        "current ThatDPSChick ps4",
+        "current Zencep",
+        "current id:9152847"
+      ]
+    },
+	
+	"match": {
+      "args": {
+        "matchID": {
+          "required": true,
+          "description": "The ID of the match."
+        },
+		"player": {
+			"required": false,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get information about a match from the match ID.",
+      "category": "general",
+      "examples": [
+        "match 963121647",
+		"match 963121647 HelpImSuffering"
+      ]
+    },
+	
+	"history": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get info about the last 10 matches played.",
+      "category": "general",
+      "examples": [
+        "history ThatDPSChick ps4",
+        "history Zencep",
+        "history id:9152847"
+      ]
+    },
+	
+	"last": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get info about the last match played",
+      "category": "general",
+      "examples": [
+        "last ThatDPSChick ps4",
+        "last Zencep",
+        "last id:9152847"
+      ]
+    },
+	
+	"blocked": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get of players that the user has blocked.",
+      "category": "general",
+      "examples": [
+        "blocked ThatDPSChick ps4",
+        "blocked Zencep",
+        "blocked id:9152847"
+      ]
+    },
+	
+	"friends": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get a list of players the user has friended.",
+      "category": "general",
+      "examples": [
+        "freinds ThatDPSChick ps4",
+        "friends Zencep",
+        "friends id:9152847"
+      ]
+    },
+	
+	"champs": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get info about the top 5 champions for the user.",
+      "category": "general",
+      "examples": [
+        "champs ThatDPSChick ps4",
+        "champs Zencep",
+        "champs id:9152847"
+      ]
+    },
+	
+	"invite": {
+      "desription": "Get an invite to the official Paladins SideKick discord server.",
+      "category": "general",
+      "examples": [
+        "invite"
+      ]
+    },
+	
+	"status": {
+      "args": {
+		"player": {
+			"required": true,
+			"description": "The player name or id of the user"
+		},
+      },
+      "desription": "Get the status of the account for a user.",
+      "category": "general",
+      "examples": [
+        "status ThatDPSChick ps4",
+        "status Zencep",
+        "status id:9152847"
+      ]
+    },
   }
 }
