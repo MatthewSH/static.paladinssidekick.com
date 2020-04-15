@@ -5,12 +5,13 @@
     "admin": "Administration"
   },
   "commands": {
-  
     "stats": {
+      "description": "Get general stats of a player.",
+      "category": "general",
       "args": {
         "player": {
           "required": true,
-          "description": "The player name or id of the user"
+          "description": "The player name or id of the player."
         },
         "platform": {
           "required": false,
@@ -23,152 +24,217 @@
           ]
         }
       },
-      "desription": "Get general stats of a player.",
-      "category": "general",
       "examples": [
         "stats ThatDPSChick ps4",
         "stats Zencep",
         "stats id:9152847"
       ]
     },
-	
-	"current": {
+    "current": {
+      "description": "Get the current match",
+      "category": "general",
       "args": {
         "player": {
           "required": true,
-          "description": "The player name or id of the user"
+          "description": "The player name or id of the player."
         }
       },
-      "desription": "Get info about your current match.",
-      "category": "general",
-      "examples": [
-        "current ThatDPSChick ps4",
-        "current Zencep",
-        "current id:9152847"
-      ]
+      "examples": []
     },
-	
-	"match": {
+    "match": {
+      "description": "Get information about a previously finished match.",
+      "category": "general",
       "args": {
         "matchID": {
           "required": true,
-          "description": "The ID of the match."
+          "description": "The match ID"
         },
-		"player": {
-			"required": false,
-			"description": "The player name or id of the user"
-		},
+        "player": {
+          "required": false,
+          "description": "The player name to get detailed stats about."
+        }
       },
-      "desription": "Get information about a match from the match ID.",
-      "category": "general",
       "examples": [
         "match 963121647",
-		"match 963121647 HelpImSuffering"
+        "match 963121647 HelpImSuffering"
       ]
     },
-	
-	"history": {
-      "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
-      },
-      "desription": "Get info about the last 10 matches played.",
+    "history": {
+      "description": "Get the last 10 matches a user has played.",
       "category": "general",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
+        }
+      },
       "examples": [
         "history ThatDPSChick ps4",
         "history Zencep",
         "history id:9152847"
       ]
     },
-	
-	"last": {
-      "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
-      },
-      "desription": "Get info about the last match played",
+    "last": {
+      "description": "An alias for match with the last match id. A quick way to get match information about the last played match.",
       "category": "general",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        }
+      },
       "examples": [
         "last ThatDPSChick ps4",
         "last Zencep",
         "last id:9152847"
       ]
     },
-	
-	"blocked": {
-      "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
-      },
-      "desription": "Get of players that the user has blocked.",
+    "friends": {
+      "description": "Get a list of a player's friends.",
       "category": "general",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
+        }
+      },
+      "examples": [
+        "friends ThatDPSChick ps4",
+        "friends Zencep",
+        "friends id:9152847"
+      ]
+    },
+    "blocked": {
+      "description": "Get a list of a player's friends.",
+      "category": "general",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
+        }
+      },
       "examples": [
         "blocked ThatDPSChick ps4",
         "blocked Zencep",
         "blocked id:9152847"
       ]
     },
-	
-	"friends": {
-      "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
-      },
-      "desription": "Get a list of players the user has friended.",
+    "champs": {
+      "description": "Get information about the top 5 champions for the users",
       "category": "general",
-      "examples": [
-        "freinds ThatDPSChick ps4",
-        "friends Zencep",
-        "friends id:9152847"
-      ]
-    },
-	
-	"champs": {
       "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
+        }
       },
-      "desription": "Get info about the top 5 champions for the user.",
-      "category": "general",
       "examples": [
         "champs ThatDPSChick ps4",
         "champs Zencep",
         "champs id:9152847"
       ]
     },
-	
-	"invite": {
-      "desription": "Get an invite to the official Paladins SideKick discord server.",
+    "status": {
+      "description": "Get the current status of an account.",
       "category": "general",
-      "examples": [
-        "invite"
-      ]
-    },
-	
-	"status": {
       "args": {
-		"player": {
-			"required": true,
-			"description": "The player name or id of the user"
-		},
+        "player": {
+          "required": true,
+          "description": "The player name or id of the player."
+        },
+        "platform": {
+          "required": false,
+          "description": "The platform to request",
+          "options": [
+            "xbox",
+            "ps4",
+            "switch",
+            "pc"
+          ]
+        }
       },
-      "desription": "Get the status of the account for a user.",
-      "category": "general",
       "examples": [
         "status ThatDPSChick ps4",
         "status Zencep",
         "status id:9152847"
       ]
     },
+    "search": {
+      "description": "Get a list of of players with the search term.",
+      "warning": "Please note that due to Discord API limiting we only provide the first 15, non-Switch results. We exclude Switch because Switch does not enforce a unique-name policy, thus making it so you can have nth amount of JohnBerryJr players while on Xbox or PS4 there can only be one JohnBerryJr.",
+      "category": "general",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player name to search for."
+        }
+      },
+      "examples": [
+        "search Hiro"
+      ]
+    },
+    "help": {
+      "description": "Get general information for the bot.",
+      "category": "general",
+      "examples": []
+    },
+    "!link": {
+      "description": "",
+      "category": "dm",
+      "args": {
+        "player": {
+          "required": true,
+          "description": "The player ID. Names/Platform does not work."
+        }
+      },
+      "examples": [
+        "!link 9152847"
+      ]
+    },
+    "!ready": {
+      "description": "Let the bot know you're ready to link the account.",
+      "category": "dm",
+      "examples": []
+    }
   }
 }
